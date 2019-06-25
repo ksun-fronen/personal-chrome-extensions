@@ -1,0 +1,58 @@
+﻿{
+  "name": "Magic Poolcat",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "基于个人需求会针对部分常用网站作出一些魔改或者优化",
+  "icons": {
+    "48": "/resources/images/logo.png",
+    "128": "/resources/images/logo.png",
+    "16": "/resources/images/logo.png"
+  },
+  "permissions": [
+    "http://*.google.com/",
+    "https://*.google.com/",
+    "chrome://favicon/",
+    "chrome://thumb/",
+    "history",
+    "topSites",
+    "storage"
+  ],
+  "browser_action": {
+    "default_title": "",
+    "default_icon": "/resources/images/logo.png",
+    "default_popup": "index.html"
+  },
+  "chrome_url_overrides": {
+    "newtab": "/html/page/newtab.html"
+  },
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "matches": [ "<all_urls>" ],
+      "exclude_matches": [],
+      "js": [
+        "/js/3rd/jquery-3.3.1.min.js",
+        "/js/common/define.js"
+      ]
+    },
+    {
+      "matches": [ "https://www.bilibili.com/*", "http://www.bilibili.com/*" ],
+      "js": [ "/js/page/index.js" ]
+    },
+    {
+      "matches": [ "https://www.pixiv.net/*", "http://www.pixiv.net/*" ],
+      "js": [ "/js/page/pixiv.js" ]
+    },
+    {
+      "matches": [ "http://fgowiki.com/*", "https://fgowiki.com/*" ],
+      "all_frames": true,
+      "js": [ "/js/3rd/jquery-3.3.1.min.js", "/js/page/fgowiki.js" ]
+    },
+    {
+      "matches": [ "http://bbs.ngacn.cc/*", "https://bbs.ngacn.cc/*" ],
+      "js": [ "/js/page/nga.js" ],
+      "css": [ "/css/page/nga.css" ]
+    }
+  ]
+
+}

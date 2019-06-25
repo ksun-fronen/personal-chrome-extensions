@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "css/page/nga.css",
+    "inputFile": "css/page/nga.scss"
+  },
+  {
+    "outputFile": "css/page/newtab.css",
+    "inputFile": "css/page/newtab.scss"
+  },
+  {
+    "outputFile": "js/template/bootTemplate.es5.js",
+    "inputFile": "js/template/bootTemplate.js"
+  },
+  {
+    "outputFile": "css/initialize/process.css",
+    "inputFile": "css/initialize/process.scss"
+  }
+]

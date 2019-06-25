@@ -1,0 +1,125 @@
+﻿body {
+  min-height: 100vh; }
+  body > .bk {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #fafafa;
+    z-index: -1; }
+    body > .bk .image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      -moz-transition: opacity .2s linear;
+      -o-transition: opacity .2s linear;
+      -webkit-transition: opacity .2s linear;
+      transition: opacity .2s linear;
+      background-color: #fff;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; }
+      body > .bk .image.on {
+        opacity: 1; }
+
+.upload {
+  position: absolute;
+  right: 20px;
+  top: 20px; }
+  .upload label {
+    font-size: 20px;
+    background: #d45836;
+    padding: 10px;
+    display: inline-block;
+    -moz-border-radius: 99999px;
+    -webkit-border-radius: 99999px;
+    border-radius: 99999px;
+    color: #fff;
+    opacity: .7;
+    -moz-transition: .1s linear;
+    -o-transition: .1s linear;
+    -webkit-transition: .1s linear;
+    transition: .1s linear;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer; }
+    .upload label:hover {
+      opacity: 1; }
+    .upload label:active {
+      background: #b14426; }
+  .upload #BackgroundUploadInput {
+    display: none;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0; }
+
+.mv-flex {
+  position: absolute;
+  left: 0;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 300px; }
+
+.mv-list {
+  opacity: .5;
+  -moz-transition: .15s linear;
+  -o-transition: .15s linear;
+  -webkit-transition: .15s linear;
+  transition: .15s linear;
+  background: rgba(253, 253, 253, 0.5);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  /*padding-left: 5px;*/ }
+  .mv-list .mv-item {
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 10px; }
+    .mv-list .mv-item:last-child {
+      border: none; }
+  .mv-list:hover {
+    opacity: 1; }
+  .mv-list .favicon {
+    width: 22px;
+    height: 22px;
+    -moz-border-radius: 999px;
+    -webkit-border-radius: 999px;
+    border-radius: 999px;
+    overflow: hidden;
+    vertical-align: middle;
+    float: left;
+    background-size: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4px;
+    margin-right: 10px;
+    background-color: #fff; }
+  .mv-list .mv-item:first-child .mv-title {
+    margin-top: 0; }
+  .mv-list .mv-title {
+    line-height: 30px;
+    font-size: 16px;
+    margin-top: 20px;
+    color: #000; }
+    .mv-list .mv-title span {
+      display: block;
+      overflow: hidden;
+      width: auto;
+      height: 30px;
+      -ms-text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+  .mv-list a {
+    display: block; }
+

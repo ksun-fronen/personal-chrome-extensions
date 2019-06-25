@@ -1,0 +1,33 @@
+﻿$baseHeight: 268;
+$customHeadBackground: 300;
+
+#custombg {
+    height: $customHeadBackground * 1px !important;
+    margin-bottom: (-323 - ($customHeadBackground - $baseHeight)) * 1px !important;
+
+    > div {
+        height: $customHeadBackground * 1px !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-attachment: fixed !important;
+        background-position: center -230px !important;
+
+        > div:last-child {
+            height: $customHeadBackground * 1px !important;
+        }
+    }
+}
+
+#mc {
+    $baseMarginBottom: 168;
+
+    #mainmenu {
+        margin-bottom: $baseMarginBottom + ($customHeadBackground - $baseHeight) * 1px;
+    }
+}
+
+.forumbox {
+    td.null {
+        display: none;
+    }
+}
