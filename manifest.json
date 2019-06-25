@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "Magic Poolcat",
   "version": "0.1",
   "manifest_version": 2,
@@ -12,7 +12,6 @@
     "http://*.google.com/",
     "https://*.google.com/",
     "chrome://favicon/",
-    "chrome://thumb/",
     "history",
     "topSites",
     "storage"
@@ -37,7 +36,7 @@
     },
     {
       "matches": [ "https://www.bilibili.com/*", "http://www.bilibili.com/*" ],
-      "js": [ "/js/page/index.js" ]
+      "js": [ "/js/page/bilibili.js" ]
     },
     {
       "matches": [ "https://www.pixiv.net/*", "http://www.pixiv.net/*" ],
