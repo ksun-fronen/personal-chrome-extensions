@@ -62,8 +62,12 @@ async function handleSign() {
         console.log('获取info接口凉凉');
         return;
     }
-    const {href} = data.data?.page_data?.[0]?.pages?.find(x => x.name === '签到福利');
-    const act_id = href.split('?').pop().split('&').find(x => x.indexOf('act_id') >= 0).split('=').pop();
+    const {href} = data.data.page_data[0].pages.find(function (x) {
+        return x.name === '签到福利';
+    });
+    const act_id = href.split('?').pop().split('&').find(function (x) {
+        return x.indexOf('act_id') >= 0
+    }).split('=').pop();
     const {data: bindData} = await instance({
         method: 'get',
         url: '/binding/api/getUserGameRolesByCookie?game_biz=hk4e_cn',
@@ -87,7 +91,7 @@ async function handleSign() {
     return !!signStatusContext.data;
 }
 
-chrome.alarms.onAlarm.addListener(async (alarm) => {
+chrome.alarms.onAlarm.addListener(async function (alarm) {
     if (alarm.name === 'interval-question') {
         console.log('定时任务执行中！');
         const isOk = await handleSign();
