@@ -9,12 +9,19 @@
     "16": "/resources/images/logo.png"
   },
   "permissions": [
+    "alarms",
+    "history",
+    "topSites",
+    "storage",
+    "notifications",
+    "cookies",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
     "http://*.google.com/",
     "https://*.google.com/",
     "chrome://favicon/",
-    "history",
-    "topSites",
-    "storage"
+    "*://*/"
   ],
   "browser_action": {
     "default_title": "",
@@ -24,10 +31,20 @@
   "chrome_url_overrides": {
     "newtab": "/html/page/newtab.html"
   },
+  "background": {
+    "scripts": [
+      "/js/3rd/axios.min.js",
+      "/js/3rd/moment.js",
+      "/js/background/mhy.js"
+    ],
+    "persistent": true
+  },
   "content_scripts": [
     {
       "all_frames": false,
-      "matches": [ "<all_urls>" ],
+      "matches": [
+        "<all_urls>"
+      ],
       "exclude_matches": [],
       "js": [
         "/js/3rd/jquery-3.3.1.min.js",
@@ -35,23 +52,45 @@
       ]
     },
     {
-      "matches": [ "https://www.bilibili.com/*", "http://www.bilibili.com/*" ],
-      "js": [ "/js/page/bilibili.js" ]
+      "matches": [
+        "https://www.bilibili.com/*",
+        "http://www.bilibili.com/*"
+      ],
+      "js": [
+        "/js/page/bilibili.js"
+      ]
     },
     {
-      "matches": [ "https://www.pixiv.net/*", "http://www.pixiv.net/*" ],
-      "js": [ "/js/page/pixiv.js" ]
+      "matches": [
+        "https://www.pixiv.net/*",
+        "http://www.pixiv.net/*"
+      ],
+      "js": [
+        "/js/page/pixiv.js"
+      ]
     },
     {
-      "matches": [ "http://fgowiki.com/*", "https://fgowiki.com/*" ],
+      "matches": [
+        "http://fgowiki.com/*",
+        "https://fgowiki.com/*"
+      ],
       "all_frames": true,
-      "js": [ "/js/3rd/jquery-3.3.1.min.js", "/js/page/fgowiki.js" ]
+      "js": [
+        "/js/3rd/jquery-3.3.1.min.js",
+        "/js/page/fgowiki.js"
+      ]
     },
     {
-      "matches": [ "http://bbs.ngacn.cc/*", "https://bbs.ngacn.cc/*" ],
-      "js": [ "/js/page/nga.js" ],
-      "css": [ "/css/page/nga.css" ]
+      "matches": [
+        "http://bbs.ngacn.cc/*",
+        "https://bbs.ngacn.cc/*"
+      ],
+      "js": [
+        "/js/page/nga.js"
+      ],
+      "css": [
+        "/css/page/nga.css"
+      ]
     }
   ]
-
 }
