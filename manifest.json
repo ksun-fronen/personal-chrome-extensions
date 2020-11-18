@@ -35,6 +35,7 @@
     "scripts": [
       "/js/3rd/axios.min.js",
       "/js/3rd/moment.js",
+      "/js/background/mihoyo.vendors.js",
       "/js/background/mhy.js"
     ],
     "persistent": true
